@@ -7,24 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{3B61DC4C-4620-48C5-B41B-AB97AC3739E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{D3428B93-F63A-476B-8986-6430A58128B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{D3428B93-F63A-476B-8986-6430A58128B2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D307E155-9395-4137-BD27-C8F786AD4480} = {D307E155-9395-4137-BD27-C8F786AD4480}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Core", "Services\Catalog\Catalog.Core\Catalog.Core.csproj", "{88A6B2E7-C72B-4593-8E40-C2ED2903A2B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Core", "Services\Catalog\Catalog.Core\Catalog.Core.csproj", "{88A6B2E7-C72B-4593-8E40-C2ED2903A2B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Application", "Services\Catalog\Catalog.Application\Catalog.Application.csproj", "{D307E155-9395-4137-BD27-C8F786AD4480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Application", "Services\Catalog\Catalog.Application\Catalog.Application.csproj", "{D307E155-9395-4137-BD27-C8F786AD4480}"
 	ProjectSection(ProjectDependencies) = postProject
 		{88A6B2E7-C72B-4593-8E40-C2ED2903A2B2} = {88A6B2E7-C72B-4593-8E40-C2ED2903A2B2}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Infrastructure", "Services\Catalog\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{78A21626-2AB4-4E0A-899E-A41B1BA4EAB8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{88A6B2E7-C72B-4593-8E40-C2ED2903A2B2} = {88A6B2E7-C72B-4593-8E40-C2ED2903A2B2}
-		{D307E155-9395-4137-BD27-C8F786AD4480} = {D307E155-9395-4137-BD27-C8F786AD4480}
-		{D3428B93-F63A-476B-8986-6430A58128B2} = {D3428B93-F63A-476B-8986-6430A58128B2}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Infrastructure", "Services\Catalog\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{78A21626-2AB4-4E0A-899E-A41B1BA4EAB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
