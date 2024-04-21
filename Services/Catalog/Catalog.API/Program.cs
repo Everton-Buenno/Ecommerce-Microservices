@@ -6,6 +6,9 @@ using Catalog.Infrastructure.Repositories;
 using Catalog.Infrastructure.Data;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using HealthChecks.UI.Client;
+using MediatR;
+using Microsoft.AspNetCore.Hosting;
+using Catalog.Application.Handlers;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,14 +20,11 @@ builder.Services.AddHealthChecks()
         HealthStatus.Degraded);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
-});
+builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" }); });
 
 //DI
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(typeof(CreateProductHandler).GetTypeInfo().Assembly);
 builder.Services.AddScoped<ICatalogContext, CatalogContext>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IBrandRepository, ProductRepository>();

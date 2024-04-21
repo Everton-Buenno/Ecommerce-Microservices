@@ -11,7 +11,6 @@ namespace Catalog.Application.Queries
 {
     public class GetProductsByBrandQuery(string brand) : IRequest<IList<ProductResponse>>
     {
-
         public string Brand { get; set; } = brand;
     }
 }
